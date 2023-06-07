@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/registerFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.white.beego.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.white.beego.ui.login.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.white.beego.ui.apiary.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_beehiveFragment"
+            app:destination="@id/beehiveFragment"
+            app:popUpTo="@id/beehiveFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_mainFragment_to_apiaryFormFragment"
+            app:destination="@id/apiaryFormFragment"
+            app:popUpTo="@id/apiaryFormFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:popUpTo="@id/settingsFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/beehiveFragment"
+        android:name="com.white.beego.ui.beehive.BeehiveFragment"
+        android:label="fragment_beehive"
+        tools:layout="@layout/fragment_beehive" >
+        <action
+            android:id="@+id/action_beehiveFragment_to_beehiveDetails"
+            app:destination="@id/beehiveDetails"
+            app:popUpTo="@id/beehiveDetails"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_beehiveFragment_to_beehiveFormFragment"
+            app:destination="@id/beehiveFormFragment"
+            app:popUpTo="@id/beehiveFormFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_beehiveFragment_to_apiaryFormFragment"
+            app:destination="@id/apiaryFormFragment"
+            app:popUpTo="@id/apiaryFormFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/beehiveDetails"
+        android:name="com.white.beego.ui.beehiveDetails.BeehiveDetailsFragment"
+        android:label="fragment_beehive_details"
+        tools:layout="@layout/fragment_beehive_details" >
+        <action
+            android:id="@+id/action_beehiveDetails_to_beehiveFormFragment"
+            app:destination="@id/beehiveFormFragment"
+            app:popUpTo="@id/beehiveFormFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_beehiveDetails_to_queenFormFragment"
+            app:destination="@id/queenFormFragment"
+            app:popUpTo="@id/queenFormFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/beehiveFormFragment"
+        android:name="com.white.beego.BeehiveFormFragment"
+        android:label="fragment_beehive_form"
+        tools:layout="@layout/fragment_beehive_form" />
+    <fragment
+        android:id="@+id/queenFormFragment"
+        android:name="com.white.beego.QueenFormFragment"
+        android:label="fragment_queen_form"
+        tools:layout="@layout/fragment_queen_form" />
+    <fragment
+        android:id="@+id/apiaryFormFragment"
+        android:name="com.white.beego.ApiaryFormFragment"
+        android:label="fragment_apiary_form"
+        tools:layout="@layout/fragment_apiary_form" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.white.beego.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
