@@ -50,7 +50,9 @@ class BeehiveFormFragment : Fragment() {
             val name = binding.txtName.text.toString()
             val description = binding.txtDescription.text.toString()
             val deviceId = binding.txtDeviceId.text.toString()
-            val beehiveRequest = BeehiveRequest(description, deviceId, name, 0, 0)
+            val beeCount = binding.txtBeeCount.text.toString()
+            val honeyCount = binding.txtHoneyCount.text.toString()
+            val beehiveRequest = BeehiveRequest(description, deviceId, name, beeCount.toInt(), honeyCount.toInt())
 
 
 
@@ -80,6 +82,8 @@ class BeehiveFormFragment : Fragment() {
                 binding.txtName.setText(it.name)
                 binding.txtDescription.setText(it.description)
                 binding.txtDeviceId.setText(it.deviceID)
+                binding.txtBeeCount.setText(it.beeCount)
+                binding.txtHoneyCount.setText(it.honeyCount)
             }
         } else {
             binding.addEditText.text = getString(R.string.txt_add_beehive)

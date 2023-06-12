@@ -64,11 +64,18 @@ class InfoFragment() : Fragment() {
 
                     binding.createdAt.text = it.data!!.createdAt.substring(0, 10)
 
+                    binding.beeCount.text = it.data!!.beeCount
+
+                    binding.honeyCount.text = it.data!!.honeyCount
+
+
                     if (it.data!!.deviceID != ""){
                         binding.device.text = getString(R.string.txt_device_state_details_on)
                     }else{
                         binding.device.text = getString(R.string.txt_device_state_details_off)
                     }
+
+
                 }
                 is NetworkResult.Error -> {
                     Toast.makeText(requireContext(), it.message.toString(), Toast.LENGTH_SHORT)

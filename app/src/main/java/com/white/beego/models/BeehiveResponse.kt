@@ -6,6 +6,8 @@ data class BeehiveResponse(
     val apiary: String,
     val createdAt: String,
     val description: String,
+    val beeCount: String,
+    val honeyCount: String,
     val deviceID: String,
     val name: String,
     val updatedAt: String

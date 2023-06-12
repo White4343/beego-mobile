@@ -51,8 +51,9 @@ class ChartFragment() : Fragment() {
     @RequiresApi(Build.VERSION_CODES.O)
     private fun setInitialChart() {
         var html = ""
+        html += createChartIframe("6486e47d-7171-4af5-8a94-122ef614a46a")
         html += createChartIframe("6480d397-f045-48a6-87ee-210564ca0c49")
-        html += createSecondChartIframe("647ed955-f045-4926-8bee-210564498f6b")
+        html += createChartIframe("647ed955-f045-4926-8bee-210564498f6b")
 
         binding.webView.loadData(html, "text/html; video/avc", "utf-8")
 
@@ -82,22 +83,6 @@ class ChartFragment() : Fragment() {
         return iframe
     }
 
-    private fun createSecondChartIframe(chartId: String): String {
-        val sdf = SimpleDateFormat("yyyy-M-dd")
-        val currentDate = sdf.format(Date())
-
-        val deviceID = beehive!!.deviceID
-
-        val iframe =
-            "<iframe width=\"100%\" height=\"500px\" src=\"https://charts.mongodb.com/charts-project-0-duzrk/embed/charts?" +
-                    "id=$chartId" +
-                    "&filter={deviceID: '$deviceID'}" +
-                    "&theme=light&autoRefresh=true&maxDataAge=10&showTitleAndDesc=false&scalingWidth=scale&scalingHeight=fixed\" title=\"Beehive chart\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n"
-
-        // val iframe = "<iframe style=\"background: #F1F5F4;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);width: 100vw;height: 100vh;\"  src=\"https://charts.mongodb.com/charts-project-0-duzrk/embed/dashboards?id=6467d5e1-a807-4c9a-83e6-9918daae0694&theme=light&autoRefresh=true&maxDataAge=3600&showTitleAndDesc=false&scalingWidth=fixed&scalingHeight=fixed\"></iframe>"
-
-        return iframe
-    }
 
     private fun setBeehiveData() {
         val jsonBeehive = arguments?.getString("chart")

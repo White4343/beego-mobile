@@ -49,6 +49,10 @@
     <string name="txt_device_beehive">Device (optional)</string>
     <string name="txt_device_beehive_hint">Write your device ID</string>
 
+    <string name="txt_device_bee_count_hint">Write your Bee Count</string>
+
+    <string name="txt_device_honey_count_hint">Write your Honey Count</string>
+
     <string name="txt_description_beehive">Description</string>
     <string name="txt_description_beehive_hint">Write your description</string>
 
@@ -58,6 +62,9 @@
     <string name="txt_description_details">Description:</string>
     <string name="txt_created_details">Created at:</string>
     <string name="txt_device_details">Device</string>
+    <string name="txt_bee_count">Bee Count:</string>
+    <string name="txt_honey_count">Honey Count:</string>
+    <string name="txt_temperature_regime">Temperature regime:</string>
     <string name="txt_device_state_details_on">Connected</string>
     <string name="txt_device_state_details_off">Disconnected</string>
 

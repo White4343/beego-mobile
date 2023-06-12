@@ -26,6 +26,10 @@
     <string name="txt_device_beehive">Пристрій (необов\'язково)</string>
     <string name="txt_device_beehive_hint">Напишіть ID свого пристрою</string>
 
+    <string name="txt_device_bee_count_hint">Введіть свою кількість бджіл</string>
+
+    <string name="txt_device_honey_count_hint">Введіть свою кількість меду</string>
+
     <string name="txt_description_beehive">Опис</string>
     <string name="txt_description_beehive_hint">Напишіть свій опис</string>
 
@@ -35,6 +39,9 @@
     <string name="txt_description_details">Опис:</string>
     <string name="txt_created_details">Створено в:</string>
     <string name="txt_device_details">Пристрій</string>
+    <string name="txt_bee_count">Кікькість бджіл:</string>
+    <string name="txt_honey_count">Кількість меду:</string>
+    <string name="txt_temperature_regime">Температурний режим:</string>
     <string name="txt_device_state_details_on">Підключено</string>
     <string name="txt_device_state_details_off">Відключено</string>
 
